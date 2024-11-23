@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="divi">
+        <button class="view">OPEN</button>
+    </div>
+    
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    console.log('HERE');
+    let datafol;
+    let dataImg;
+    xhr.onreadystatechange= function (){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            const data = JSON.parse(this.responseText);
+            datafol=data.followers;
+            dataImg = data.avatar_url;
+            console.log(dataImg);
+            
+        }
+    }
+    xhr.send();
+    const divi = document.getElementById('divi');
+    document.querySelector('.view').addEventListener('click',()=>{
+        divi.innerHTML=`
+        <ul>
+           <li><img src="${dataImg}" alt="Avatar" style="width: 150px; height: 150px; border-radius: 50%;"></li>
+            <li><p>${datafol}</p></li>
+            </ul>
+        `
+    });
+
+</script>
+</html>
