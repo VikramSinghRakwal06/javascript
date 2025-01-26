@@ -12,8 +12,9 @@
 //     console.log('You get a 30% discount on ticket price');
 // }
 
- let length = prompt('Enter the length of the rectangle: ');
-let width = prompt('Enter the width of a rectange : ');
+//  let length = prompt('Enter the length of the rectangle: ');
+// let width = prompt('Enter the width of a rectange : ');
 
-const area = length * width;
-console.log('The area of the rectangle is : '+ area);
+// const area = length * width;
+// console.log('The area of the rectangle is : '+ area);
+let 
