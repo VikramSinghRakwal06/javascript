@@ -17,4 +17,21 @@
 
 // const area = length * width;
 // console.log('The area of the rectangle is : '+ area);
-let 
+
+
+function product(name, price, inStock){
+    this.name = name;
+    this.price = price;
+    this.inStock= inStock;
+}
+
+const p1 = new product('maggi',10,true);
+
+const p2 = new product(
+    'coffee', 5, false
+);
+
+const p3 = new product('sugar', 20 , true);
+
+const market = [p1,p2,p3];
+console.log(market)
