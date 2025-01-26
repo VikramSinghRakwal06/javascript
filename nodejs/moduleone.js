@@ -2,3 +2,4 @@
 import * as a from './modulesecond.mjs'
 a.simple()
 a.simple2();
+//"type": "module"
