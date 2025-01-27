@@ -36,18 +36,26 @@
 // const market = [p1,p2,p3];
 // console.log(market)
 
-const party = ['Vikram','Milan','Vanshaj','Akshat','Himneesh','Jalaj','Aayush','QT'];
+// const party = ['Vikram','Milan','Vanshaj','Akshat','Himneesh','Jalaj','Aayush','QT'];
 
-let guest = prompt('What is your name?');
-let invite = false;
-for(let i = 0;i<party.length;i++){
-    if(party[i]===guest){
-        console.log('You are invited to the party');
-        invite= true;
-    }
+// let guest = prompt('What is your name?');
+// let invite = false;
+// for(let i = 0;i<party.length;i++){
+//     if(party[i]===guest){
+//         console.log('You are invited to the party');
+//         invite= true;
+//     }
     
+// }
+
+// if(!invite){
+//     console.log('You are not invited to the party');
+// }
+const weather = {
+    'date':'27-1-2025',
+    'temperature':'15° C',
+    'conditions':'dry',
+    'humidity':'19%'
 }
 
-if(!invite){
-    console.log('You are not invited to the party');
-}
+console.log(JSON.stringify(weather))
