@@ -29,14 +29,26 @@
 //     console.log('Who knows the event');
 // })
 
-const os = require('os');
-const fs = require('fs');
+// const os = require('os');
+// const fs = require('fs');
 
 
-const user = os.userInfo();
-console.log(user);
-console.log(user.username);
+// const user = os.userInfo();
+// console.log(user);
+// console.log(user.username);
 
-fs.appendFile('greeting.txt','Hi ' + user.username + '! \n',()=>{
-    console.log('file is created ')
-})
+// fs.appendFile('greeting.txt','Hi ' + user.username + '! \n',()=>{
+//     console.log('file is created ')
+// })
+// console.log(fs)
+// console.log('server is running')
+// const notes = require('./notes.js')
+
+// const age = notes.age;
+// const result = notes.addnum(age,12);
+// console.log('result is '+ result);
+const _ = require('lodash')
+const arr = ['Vikram','Vikram','QT','QT',1,2,3,1,2];
+
+const filter = _.uniq(arr);
+console.log(filter)
