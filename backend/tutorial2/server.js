@@ -54,14 +54,14 @@
 // console.log(filter)
 console.log('Server is running');
 const express = require('express');
-const app = express()
-const port = 8000
+const app = express();
+const port = 8000;
 app.get('/',function(req,res){
-    res.send('Welcome to our restaurant, what do you want to order')
+    res.send('Welcome to our restaurant, what do you want to order');
 })
 
 app.get('/NonVeg',function(req,res){
-    res.send("Sorry we don't serve non-vegetarian food here")
+    res.send("Sorry we don't serve non-vegetarian food here");
 })
 
 app.get('/Veg',function(req,res){
@@ -71,8 +71,19 @@ app.get('/Veg',function(req,res){
                 <li>Paneer Butter masala</li>
                 <li>Shahi Paneer</li>
                 <li>Malai Kofta</li>
-                </ul>`)
+                </ul>`);
 })
+
+app.get('/vegan',function(req,res){
+    const idli ={
+        name:'rawa idli',
+        size:'10 cm diameter',
+        is_Chutney:true,
+        is_Sambhar:false
+    }
+    res.send(idli)
+})
+
 app.listen(port,()=>{
-    console.log(`server is running on port: ${port}`)
+    console.log(`server is running on port: ${port}`);
 })
